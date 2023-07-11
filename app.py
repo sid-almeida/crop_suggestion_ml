@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 # Carregando o dataset
-data_model = pd.read_csv("data_num.csv")
+data_model = pd.read_csv("https://raw.githubusercontent.com/sid-almeida/crop_suggestion_ml/master/data_num.csv")
 x = data_model.drop('crop_label', axis=1)
 y = data_model['crop_label']
 
@@ -18,7 +18,7 @@ model = rforest.fit(x_train, y_train)
 
 # Criando o app
 with st.sidebar:
-    st.image("Brainize Tech (1).png", width=250)
+    st.image("https://github.com/sid-almeida/crop_suggestion_ml/blob/master/Brainize%20Tech%20(1).png?raw=true", width=250)
     st.title("Crop Recommendation")
     choice = st.radio("**Navigation:**", ("About", "Prediction", "Batch Prediction"))
     st.info('**Note:** Please be aware that this application is intended solely for educational purposes. It is strongly advised against utilizing this tool for making any real life decisions.')
